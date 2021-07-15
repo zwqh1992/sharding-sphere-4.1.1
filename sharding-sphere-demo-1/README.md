@@ -1,6 +1,6 @@
 # 工程简介
 
-sharding-sphere 分库示例
+ShardingSphere 水平分表示例
 
 
 
