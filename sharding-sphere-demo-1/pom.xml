@@ -79,7 +79,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.3.7.RELEASE</version>
                 <configuration>
                     <mainClass>cn.zwqh.shardingspheredemo1.ShardingSphereDemo1Application</mainClass>
                 </configuration>
