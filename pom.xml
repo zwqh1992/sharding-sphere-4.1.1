@@ -18,8 +18,20 @@
     </parent>
 
     <modules>
-        <!-- 数据库分库示例 -->
+        <!-- 水平分表示例 -->
         <module>sharding-sphere-demo-1</module>
+        <!-- 水平分库分表示例 -->
+        <module>sharding-sphere-demo-2</module>
+        <!-- 垂直分库示例 -->
+        <module>sharding-sphere-demo-3</module>
+        <!-- 广播表示例 -->
+        <module>sharding-sphere-demo-4</module>
+        <!-- 读写分离示例 -->
+        <module>sharding-sphere-demo-5</module>
+        <!-- hint数据分片和强制路由示例 -->
+        <module>sharding-sphere-demo-6</module>
+        <!-- 编排治理-注册中心/配置中心 -->
+        <module>sharding-sphere-demo-7</module>
     </modules>
     <!-- 依赖版本管理 -->
     <properties>
@@ -32,6 +44,7 @@
         <mybatis.version>2.1.3</mybatis.version>
         <lombok.version>1.18.12</lombok.version>
         <mysql.version>8.0.23</mysql.version>
+        <reg-zookeeper-curator.version>4.0.1</reg-zookeeper-curator.version>
     </properties>
 
     <dependencyManagement>
@@ -87,6 +100,12 @@
                 <groupId>org.apache.shardingsphere</groupId>
                 <artifactId>sharding-orchestration-center-zookeeper-curator</artifactId>
                 <version>${sharding-sphere.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-orchestration-reg-zookeeper-curator</artifactId>
+                <version>${reg-zookeeper-curator.version}</version>
             </dependency>
 
             <dependency>

@@ -14,6 +14,8 @@ sharding-sphere-demo-6 hint数据分片和强制路由示例
 
 sharding-sphere-demo-7 编排治理-注册中心/配置中心
 
+sharding-sphere-demo-8 编排治理-数据脱敏
+
 Dockerfile/ui sharding-ui Dockerfile 用于构建自定义镜像
 
 Dockerfile/zk 注册中心搭建

@@ -1,0 +1,4 @@
+org.apache.shardingsphere.encrypt.strategy.impl.AESEncryptor
+org.apache.shardingsphere.encrypt.strategy.impl.MD5Encryptor
+cn.zwqh.shardingspheredemo8.encryptor.Sha256Encryptor
+cn.zwqh.shardingspheredemo8.encryptor.Sha256RandomEncryptor
