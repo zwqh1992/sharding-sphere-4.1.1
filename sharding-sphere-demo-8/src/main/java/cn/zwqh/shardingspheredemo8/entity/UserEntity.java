@@ -16,5 +16,7 @@ public class UserEntity {
 
     private String password;
 
-    private String assisted;
+    private String passwordEncrypt;
+
+    private String passwordAssisted;
 }

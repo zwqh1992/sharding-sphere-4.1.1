@@ -16,11 +16,12 @@ public interface UserMapper {
     @Insert("insert into t_user(user_id,user_name,password) values(#{userId},#{userName},#{password})")
     void insertUser(UserEntity userEntity);
 
-    @Select("select user_id,user_name,password from t_user where user_name=#{userName} and password=#{password}")
+    @Select("select * from t_user where user_name=#{userName} and password=#{password}")
     @Results({
             @Result(column = "user_id", property = "userId"),
             @Result(column = "user_name", property = "userName"),
-            @Result(column = "password", property = "password")
+            @Result(column = "password", property = "password"),
+            @Result(column = "password_assisted", property = "passwordAssisted")
     })
     List<UserEntity> getUserInfo(@Param("userName") String userName, @Param("password") String password);
 }
