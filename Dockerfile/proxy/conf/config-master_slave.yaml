@@ -1,0 +1,25 @@
+schemaName: master_slave_db
+
+dataSources:
+  master:
+    url: jdbc:mysql://127.0.0.1:3306/ds2?serverTimezone=UTC&useSSL=false
+    username: root
+    password:
+    connectionTimeoutMilliseconds: 30000
+    idleTimeoutMilliseconds: 60000
+    maxLifetimeMilliseconds: 1800000
+    maxPoolSize: 50
+  slave:
+    url: jdbc:mysql://127.0.0.1:3307/ds2?serverTimezone=UTC&useSSL=false
+    username: root
+    password:
+    connectionTimeoutMilliseconds: 30000
+    idleTimeoutMilliseconds: 60000
+    maxLifetimeMilliseconds: 1800000
+    maxPoolSize: 50
+
+masterSlaveRule:
+  name: ms_ds
+  masterDataSourceName: master
+  slaveDataSourceNames:
+    - slave

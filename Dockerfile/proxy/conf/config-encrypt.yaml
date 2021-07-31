@@ -1,0 +1,25 @@
+schemaName: encrypt_db
+
+dataSource:
+  url: jdbc:mysql://127.0.0.1:3306/ds1?serverTimezone=UTC&useSSL=false
+  username: root
+  password: 123456
+  connectionTimeoutMilliseconds: 30000
+  idleTimeoutMilliseconds: 60000
+  maxLifetimeMilliseconds: 1800000
+  maxPoolSize: 50
+encryptRule:
+  encryptors:
+    encryptor_aes:
+      type: aes
+      props:
+        aes.key.value: 123456
+    # encryptor_md5:
+    #   type: md5
+  tables:
+    t_encrypt:
+      columns:
+        password:
+          plainColumn: password
+          cipherColumn: password_encryptor
+          encryptor: encryptor_aes
